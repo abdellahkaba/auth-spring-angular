@@ -1,6 +1,6 @@
 /* tslint:disable */
 /* eslint-disable */
-import { HttpClient, HttpContext } from '@angular/common/http';
+import {HttpClient, HttpClientModule, HttpContext} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -18,7 +18,7 @@ import { register } from '../fn/authentication/register';
 import { Register$Params } from '../fn/authentication/register';
 
 @Injectable({ providedIn: 'root' })
-export class AuthenticationService extends BaseService {
+export class AuthenticationService extends BaseService{
   constructor(config: ApiConfiguration, http: HttpClient) {
     super(config, http);
   }
